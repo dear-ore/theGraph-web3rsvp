@@ -2,7 +2,7 @@ specVersion: 0.0.4
 features:
   - ipfsOnEthereumContracts
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: WEB3RSVP
@@ -22,7 +22,7 @@ dataSources:
         - Confirmation
       abis:
         - name: WEB3RSVP
-          file: ./abis/WEB3RSVP.json
+          file: WEB3RSVP\abis\WEB3RSVP.json
       eventHandlers:
         - event: ConfirmedAttendee(bytes32,address)
           handler: handleConfirmedAttendee
@@ -32,5 +32,4 @@ dataSources:
           handler: handleNewEventCreated
         - event: NewRSVP(bytes32,address)
           handler: handleNewRSVP
-      file: ./src/web-3-rsvp.ts
- 
+      file: WEB3RSVP\WEB3RSVP.wasm
